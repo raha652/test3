@@ -17,19 +17,39 @@ document.getElementById("uploadBtn").addEventListener("click", () => {
 });
 
 // فرم گزارش به گوگل شیت
+
 document.getElementById("reportForm").addEventListener("submit", function (e) {
   e.preventDefault();
-  const formData = new FormData(this);
+
+  const formData = {
+    technician: document.getElementById("technician").value,
+    technician_assistant: document.getElementById("technician_assistant").value,
+    task: document.getElementById("task").value,
+    activity: document.getElementById("activity").value,
+    device_details: document.getElementById("device_details").value,
+    date: document.getElementById("date").value,
+    employee_id: document.getElementById("employee_id").value,
+    base: document.getElementById("base").value
+  };
+
   fetch(SHEET_URL, {
     method: "POST",
-    body: formData
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(formData)
   })
-    .then(res => res.text())
+    .then(res => res.json())
     .then(data => {
-      document.getElementById("formStatus").textContent = "✅ ارسال شد.";
-      this.reset();
+      if (data.result === "success") {
+        document.getElementById("formStatus").textContent = "✅ ارسال شد.";
+        this.reset();
+      } else {
+        document.getElementById("formStatus").textContent = "❌ خطا در ارسال.";
+      }
     })
     .catch(err => {
+      console.error(err);
       document.getElementById("formStatus").textContent = "❌ خطا در ارسال.";
     });
 });
