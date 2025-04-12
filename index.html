@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>فرم گزارش تکنسین</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>سیستم گزارش تکنسین</h1>
+    <div class="button-group">
+      <button id="formBtn">📝 فرم گزارش</button>
+      <button id="uploadBtn">📸 ارسال ویدیو/عکس</button>
+    </div>
+
+    <!-- فرم گزارش -->
+    <form id="reportForm" class="hidden">
+      <input type="text" placeholder="تکنسین" name="technician" required />
+      <input type="text" placeholder="تکنسین همراه" name="assistant" />
+      <input type="text" placeholder="تسک" name="task" required />
+      <input type="text" placeholder="فعالیت انجام شده" name="activity" />
+      <input type="text" placeholder="مشخصات دستگاه (در صورت نصب)" name="device" />
+      <input type="date" name="date" required />
+      <input type="text" placeholder="آی‌دی کارمند" name="employee_id" required />
+      <input type="text" placeholder="بیس" name="base" />
+      <button type="submit">📤 ارسال گزارش</button>
+      <p id="formStatus"></p>
+    </form>
+
+    <!-- فرم آپلود فایل -->
+    <form id="uploadForm" class="hidden">
+      <input type="file" name="media" accept="image/*,video/*" required />
+      <button type="submit">📤 ارسال فایل</button>
+      <p id="uploadStatus"></p>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
