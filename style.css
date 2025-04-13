@@ -1,63 +1,62 @@
 body {
-  font-family: sans-serif;
-  background: #f2f2f2;
+  font-family: "Tahoma", sans-serif;
+  background-color: #f3f3f3;
   direction: rtl;
-  text-align: center;
-  padding: 2rem;
+  text-align: right;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
   max-width: 500px;
-  margin: auto;
-  background: #fff;
-  border-radius: 1rem;
-  box-shadow: 0 0 20px rgba(0,0,0,0.1);
-  padding: 2rem;
+  margin: 40px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
 
 h1 {
+  text-align: center;
   color: #333;
-  margin-bottom: 2rem;
 }
 
 .button-group {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 2rem;
+  margin-bottom: 20px;
 }
 
 button {
-  padding: 1rem;
-  font-size: 1rem;
-  cursor: pointer;
-  border: none;
-  border-radius: 0.5rem;
-  background-color: #4CAF50;
+  padding: 10px 20px;
+  background: #1976d2;
   color: white;
-  width: 48%;
-  transition: background 0.3s;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
 }
 
 button:hover {
-  background-color: #388E3C;
+  background: #125ea8;
 }
 
-form input, form button {
-  display: block;
+input[type="text"],
+input[type="date"],
+input[type="file"] {
   width: 100%;
-  padding: 0.75rem;
-  margin: 0.5rem 0;
-  font-size: 1rem;
-}
-
-form button {
-  background-color: #2196F3;
-}
-
-form button:hover {
-  background-color: #1976D2;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
 }
 
 .hidden {
   display: none;
+}
+
+p {
+  margin-top: 10px;
+  font-weight: bold;
 }

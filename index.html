@@ -16,14 +16,14 @@
 
     <!-- فرم گزارش -->
     <form id="reportForm" class="hidden">
-      <input type="text" placeholder="تکنسین" name="technician" required />
-      <input type="text" placeholder="تکنسین همراه" name="assistant" />
-      <input type="text" placeholder="تسک" name="task" required />
-      <input type="text" placeholder="فعالیت انجام شده" name="activity" />
-      <input type="text" placeholder="مشخصات دستگاه (در صورت نصب)" name="device" />
-      <input type="date" name="date" required />
-      <input type="text" placeholder="آی‌دی کارمند" name="employee_id" required />
-      <input type="text" placeholder="بیس" name="base" />
+      <input type="text" id="technician" name="technician" placeholder="تکنسین" required />
+      <input type="text" id="technician_assistant" name="technician_assistant" placeholder="تکنسین همراه" />
+      <input type="text" id="task" name="task" placeholder="تسک" required />
+      <input type="text" id="activity" name="activity" placeholder="فعالیت انجام شده" />
+      <input type="text" id="device_details" name="device_details" placeholder="مشخصات دستگاه (در صورت نصب)" />
+      <input type="date" id="date" name="date" required />
+      <input type="text" id="employee_id" name="employee_id" placeholder="آی‌دی کارمند" required />
+      <input type="text" id="base" name="base" placeholder="بیس" />
       <button type="submit">📤 ارسال گزارش</button>
       <p id="formStatus"></p>
     </form>
